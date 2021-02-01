@@ -12,7 +12,7 @@ public class Move : MonoBehaviour
     public KeyCode left;
     public KeyCode jump;
     public bool groundcube = true;
-    
+    public Manager gm;
 
     public void Start()
     {
@@ -42,5 +42,12 @@ public class Move : MonoBehaviour
         {
             groundcube = true;
         }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Death");
+        Debug.Log("Death");
+        gm.Lose();
     }
 }
