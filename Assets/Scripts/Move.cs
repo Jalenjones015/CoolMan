@@ -32,7 +32,7 @@ public class Move : MonoBehaviour
 
         if (Input.GetKeyDown(jump) && groundcube)
         {
-            rig.AddForce(new Vector2(0, 10), ForceMode.Impulse);
+            rig.AddForce(new Vector2(0, 11), ForceMode.Impulse);
             groundcube = false;
         }
     }
