@@ -3,25 +3,25 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MainMenu : MonoBehaviour
+public class Main : MonoBehaviour
 {
-    public string startSceneName;
+    public string Sn;
 
-    public void StartPressed()
+    public void Start()
     {
-        SceneManager.LoadScene(startSceneName);
+        SceneManager.LoadScene(Sn);
     }
 
-    public void CloseGame()
+    public void close()
     {
         Application.Quit();
-        Debug.Log("Quit");
+        Debug.Log("quit");
     }
 
-    public void Back()
+    public void back()
+
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
-        Debug.Log("Back");
+        Debug.Log("back");
     }
 }
-
