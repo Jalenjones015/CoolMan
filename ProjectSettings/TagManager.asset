@@ -7,6 +7,8 @@ TagManager:
   - Floor
   - Bob feet
   - Death
+  - DB
+  - Goal
   layers:
   - Default
   - TransparentFX

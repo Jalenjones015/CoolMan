@@ -2,13 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Death : MonoBehaviour
+public class enemydeathh : MonoBehaviour
 {
+   
+    public GameObject DB;
+
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.collider.CompareTag("Player"))
-        {
-            Destroy(gameObject);
-        }
+        Destroy(gameObject);
     }
 }
+
+
