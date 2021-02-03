@@ -26,18 +26,12 @@ public class Ai : MonoBehaviour
         en.SetDestination(Play.position);
     }
 
-    public void OnTriggerEnter(Collider Enemy)
+    public void OnTriggerEnter(Collider other)
     {
-        if (Enemy.tag == "Enemy") ;
-        {
-            lm.takelife();
-        }
-
-        if (Enemy.tag == "EM") ;
-        {
-            lm.gainlife();
-
-        }
+        if (other.tag == "EH") ;
+        em.gameObject.SetActive(false);
+        Debug.Log("Death");
+        gm.Lose();
     }
 
 
