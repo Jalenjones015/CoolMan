@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 
 public class Ai : MonoBehaviour
@@ -11,11 +12,13 @@ public class Ai : MonoBehaviour
     NavMeshAgent en;
     public Manager gm;
     public GameObject em;
+    private Lives lm;
 
 
     void Start()
     {
         en = GetComponent<NavMeshAgent>();
+        lm = FindObjectOfType<Lives>();
     }
 
     private void Update()
@@ -23,12 +26,18 @@ public class Ai : MonoBehaviour
         en.SetDestination(Play.position);
     }
 
-    public void OnTriggerEnter(Collider other)
+    public void OnTriggerEnter(Collider Enemy)
     {
-        if (other.tag == "EH") ;
-        em.gameObject.SetActive(false);
-        Debug.Log("Death");
-        gm.Lose();
+        if (Enemy.tag == "Enemy") ;
+        {
+            lm.takelife();
+        }
+
+        if (Enemy.tag == "EM") ;
+        {
+            lm.gainlife();
+
+        }
     }
 
 

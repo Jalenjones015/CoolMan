@@ -5,6 +5,7 @@ using UnityEngine;
 public class Goal : MonoBehaviour
 {
     public Manager gm;
+    public GameObject em;
 
 
     private void OnCollisionEnter(Collision collision)
@@ -13,6 +14,7 @@ public class Goal : MonoBehaviour
         {
             Debug.Log("Win");
             gm.Win();
+            em.gameObject.SetActive(false);
         }
     }
 }
