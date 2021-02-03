@@ -30,5 +30,7 @@ public class Main : MonoBehaviour
     public void Replay()
     {
         FindObjectOfType<Manager>().Reset();
+        SceneManager.LoadScene("SampleScene");
+        Debug.Log("Reset");
     }
 }

@@ -9,6 +9,7 @@ public class Manager : MonoBehaviour
     public GameObject win;
     public GameObject lose;
 
+
     void Start()
     {
         ps = player.transform.position;
